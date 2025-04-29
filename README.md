@@ -1,85 +1,43 @@
+# ASTRA Pro — AI Semantic Journal Agent 🌌
 
-# ASA – Astronaut Support Agent 👩‍🚀🤖
+## Overview
 
-ASA is a voice-activated, emotionally-aware AI assistant designed for astronauts during space missions. Built in Python with natural language processing and sentiment analysis, ASA helps crew members log journal entries, access information, and stay emotionally connected—all through speech.
+ASTRA (Advanced Semantic Task and Reflection Assistant) is an AI agent designed for voice-controlled journaling, mood analysis, and personal record keeping.  
+Built using the **Semantic Kernel** framework, ASTRA Pro offers modular, extendable skills focused on human-AI emotional support.
 
-## 🌟 Features
+Developed by **Natalia Solorzano** for the Microsoft AI Agents Hackathon 2025 and ITAI 2277 Capstone Project.
 
-- 🎙 Voice recognition and command processing
-- 🧠 Sentiment analysis with TextBlob
-- 🤖 Transformer-powered summarization (HuggingFace `distilbart`)
-- 🔐 Multi-user login system
-- 📝 Per-user journal logging with timestamps and mood tags
-- 📚 Voice-based Wikipedia search
-- 🎨 Personality system (`asa_profile.json`)
-- 🖼 Avatar display using Pillow (PIL)
-- 💬 Fun ASA personality with ASA Lite/Pro tier joke
-- 💻 Modular code structure for easy expansion
+---
 
-## 🖼 ASA Avatar
+## Features
 
-Upon startup, ASA displays her official visual identity using Pillow (PIL).
-This avatar reflects her profile as a friendly, lilac-colored robot with a bow and a NASA lab coat—built to be a charming and mission-ready companion.
+- 🔊 Natural voice interface (speech recognition)
+- ✍️ Save daily journal logs with automatic folder organization
+- 📈 Sentiment analysis (positive / negative / neutral)
+- 📝 Summarization of journal entries using transformers
+- 📁 Organized by user, year, month, day, mood
+- 💬 Modular skills using Microsoft Semantic Kernel
 
-## 🧪 Tech Stack
+---
+
+## Technologies Used
 
 - Python 3.10+
-- `speech_recognition`
-- `pyttsx3`
-- `textblob`
-- `transformers`
-- `Pillow`
-- `wikipedia`
-- JSON for data handling
+- Semantic Kernel (Microsoft)
+- TextBlob (sentiment analysis)
+- Transformers (distilbart-cnn-12-6)
+- SpeechRecognition
+- Pyttsx3 (text-to-speech)
+- PIL (image loading)
 
-## 📁 Project Structure
+---
 
-```
-/FP_NataliaSolorzano_ITAI2372/
-├── main.py
-├── users.json
-├── asa_profile.json
-├── requirements.txt
-├── /journal_logs/
-│   └── <user>/
-│       └── log_*.txt
-├── /assets/
-│   └── asa_avatar.png
-```
+## Installation
 
-## 🚀 How to Run
-
-1. Create and activate a virtual environment
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Run the assistant:
-   ```
-   python main.py
-   ```
-
-## 🔐 Default Users
-
-Edit `users.json` to manage crew access:
-```json
-{
-  "natalia": { "password": "orion1" },
-  "assem": { "password": "lunar" },
-  "max": { "password": "puppy" }
-}
-```
-
-## 🪩 Bonus Features
-
-- Personality-driven responses
-- Avatar with spoken identity
-- Future plans for GUI (Tkinter/Streamlit)
-- Hugging Face web integration (planned)
-- ASA Pro Edition coming soon 😉
-
-## 👩‍💻 Created by
-
-**Natalia Solorzano**  
-For the NASA AI Agent 2025  
-ITAI 2372 - AI Applications  
+```bash
+git clone https://github.com/nataliacsp/ASTRAAgent-Pro.git
+cd ASTRAAgent-Pro
+python3 -m venv venv
+source venv/bin/activate  # or venv\\Scripts\\activate on Windows
+pip install -r requirements.txt
+python -m textblob.download_corpora
